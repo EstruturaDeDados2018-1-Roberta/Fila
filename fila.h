@@ -1,9 +1,5 @@
 typedef struct Fila fila;
 typedef struct No no;
-struct No {
-	int item;
-	no *proximo;
-};
 struct Fila {
 	no *cabeca;
 	no *cauda;
@@ -12,7 +8,6 @@ struct Fila {
 
 int vazia(fila* fila);
 int tamanho(fila *fila);
-no* criaNo(int item);
 fila* criaFila();
 void enfileira(int item, fila *fila);
 int desenfileira(fila *fila);

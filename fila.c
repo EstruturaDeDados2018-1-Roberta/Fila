@@ -1,18 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fila.h"
+#include "no.h"
 
 int vazia(fila* fila) {
 	return fila->tamanho == 0;
 }
 int tamanho(fila *fila) {
 	return fila->tamanho;
-}
-no* criaNo(int item) {
-	no *novoNo = (no*)malloc(sizeof(no));
-	novoNo->item = item;
-	novoNo->proximo = NULL;
-	return novoNo;
 }
 fila* criaFila() {
 	fila *novaFila = (fila*)malloc(sizeof(fila));
