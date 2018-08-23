@@ -12,6 +12,7 @@ struct Fila {
 
 int vazia(fila* fila);
 int tamanho(fila *fila);
+no* criaNo(int item);
 fila* criaFila();
 void enfileira(int item, fila *fila);
 int desenfileira(fila *fila);
