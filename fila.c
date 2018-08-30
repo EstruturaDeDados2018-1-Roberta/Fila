@@ -3,11 +3,11 @@
 #include "fila.h"
 #include "no.h"
 
-int vazia(fila* fila) {
-	return fila->tamanho == 0;
-}
 int tamanho(fila *fila) {
 	return fila->tamanho;
+}
+int vazia(fila* fila) {
+	return tamanho(fila) == 0;
 }
 fila* criaFila() {
 	fila *novaFila = (fila*)malloc(sizeof(fila));
@@ -35,6 +35,7 @@ int desenfileira(fila *fila) {
 		no *no = fila->cabeca;
 		fila->cabeca = fila->cabeca->proximo;
 		free(no);
+		fila->tamanho--;
 		return item;
 	}
 }
